@@ -13,7 +13,7 @@ const withDB = async (operations, res) => {
     const client = await MongoClient.connect("mongodb://localhost:27017", {
       useNewUrlParser: true,
     });
-    const db = client.db("my-blog");
+    const db = client.db("my-page");
 
     await operations(db);
 
